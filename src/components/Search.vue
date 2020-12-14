@@ -37,7 +37,7 @@ export default {
     // Makes a fetch request based on user input with a debounce to prevent mutiple fires of the fetch request.
     searchInput: debounce(function(e) {
          try {
-            axios.get(`https://superheroapi.com/api/3565074916915943/search/${e}`).then(response => {this.hero = response.data.results})
+            axios.get(`https://superheroapi.com/api/10214011362517965/search/${e}`).then(response => {this.hero = response.data.results})
            }
         catch {
             console.error(e)
