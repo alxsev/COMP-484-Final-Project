@@ -3,7 +3,7 @@
   <div class="page-container">
     <md-app>
       <md-app-toolbar class="md-primary">
-        <span class="md-title">Find that Superhero</span>
+        <span class="md-title">Superhero Search</span>
       </md-app-toolbar>
       <md-app-content>
         <Search />
@@ -11,6 +11,12 @@
     </md-app>
   </div>
 </template>
+
+<style scoped>
+ body{
+   margin: 0px;
+ }
+</style>
 
 <!--Javascript that imports needed components and exports this component-->
 <script>
@@ -23,9 +29,3 @@ export default {
   }
 }
 </script>
-
-<style>
- body {
-   margin: 0px;
- }
-</style>

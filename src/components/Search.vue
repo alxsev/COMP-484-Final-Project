@@ -2,11 +2,11 @@
 <template>
   <div>
     <md-field md-layout="box">
-    <md-input  @input="searchInput" v-model="withLabel" placeholder="Search..." ></md-input>
+    <md-input  @input="searchInput" v-model="withLabel" placeholder="Enter in a Superhero name..." ></md-input>
     </md-field>
     <div>
         <div v-if="hero">
-            <Hero v-for="one in hero" :key="one.name" :name="one.name" :realname="one.biography['full-name']" :gender="one.appearance.gender" />
+            <Hero v-for="one in hero" :key="one.name" :image="one.image.url" :name="one.name" :realname="one.biography['full-name']" :gender="one.appearance.gender" :firstappear="one.biography['first-appearance']" :publisher="one.biography.publisher"/>
         </div>
     </div>
   </div>
@@ -16,8 +16,7 @@
  .md-drawer {
 	width: 230px;
 	max-width: calc(100vw - 125px);
-}
- 
+} 
 </style>
 
 <script>
