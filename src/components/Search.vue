@@ -20,7 +20,7 @@
 </style>
 
 <script>
-// Axios is a wrapper around the Fetch API.
+// Axios is a wrapper around the Fetch API. Fetch returns a string, string needs to be JSON. Axios does that for you.
 import axios from "axios";
 import {debounce} from 'lodash';
 import Hero from "./Hero.vue";
@@ -37,7 +37,7 @@ export default {
     // Makes a fetch request based on user input with a debounce to prevent mutiple fires of the fetch request.
     searchInput: debounce(function(e) {
          try {
-            axios.get(`https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/3565074916915943/search/${e}`).then(response => {this.hero = response.data.results})
+            axios.get(`https://superheroapi.com/api/3565074916915943/search/${e}`).then(response => {this.hero = response.data.results})
            }
         catch {
             console.error(e)
